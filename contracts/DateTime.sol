@@ -1,6 +1,6 @@
-pragma solidity ^0.4.16;
+pragma solidity  ^0.5.2;
 
-contract DateTime {
+library DateTime {
         /*
          *  Date and Time utilities for ethereum contracts
          *
@@ -57,7 +57,7 @@ contract DateTime {
                 }
         }
 
-        function parseTimestamp(uint timestamp) internal pure returns (_DateTime dt) {
+        function parseTimestamp(uint timestamp) internal pure returns (_DateTime memory dt) {
                 uint secondsAccountedFor = 0;
                 uint buf;
                 uint8 i;
